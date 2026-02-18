@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mobile SRE Education</title>
+<style>
+  body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#0b1220;color:#e6edf6;line-height:1.6}
+  header{padding:80px 20px;text-align:center;background:linear-gradient(180deg,#0f1b35,#0b1220)}
+  h1{font-size:42px;margin:0 0 10px}
+  h2{margin-top:0}
+  .tag{color:#7dd3fc;font-weight:600}
+  .container{max-width:1100px;margin:auto;padding:60px 20px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+  .card{background:#121b33;border-radius:16px;padding:24px;box-shadow:0 10px 25px rgba(0,0,0,.3)}
+  .card h3{margin-top:0;color:#7dd3fc}
+  .cta{display:inline-block;margin-top:20px;padding:12px 22px;border-radius:10px;background:#2563eb;color:white;text-decoration:none}
+  footer{padding:40px 20px;text-align:center;color:#9aa4b2}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mobile Site Reliability Engineering</h1>
+  <p class="tag">Learn how production mobile apps stay fast, stable and scalable</p>
+  <a class="cta" href="#learn">Start Learning</a>
+</header>
+
+<section class="container" id="problem">
+  <h2>Why Mobile Reliability Matters</h2>
+  <p>Apps don’t fail in development — they fail in production. Real users experience crashes, latency spikes, API failures and rollout disasters. This site explains how reliability engineering prevents those failures before customers notice.</p>
+</section>
+
+<section class="container">
+  <h2>Expertise</h2>
+  <div class="grid">
+    <div class="card"><h3>Crash Prevention</h3><p>Detect crash patterns, velocity alerts and regression analysis before app store ratings drop.</p></div>
+    <div class="card"><h3>Performance</h3><p>Measure startup time, network latency and rendering performance using observability.</p></div>
+    <div class="card"><h3>Release Safety</h3><p>Canary deployments, staged rollouts and error budgets for mobile releases.</p></div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Proof & Case Studies</h2>
+  <div class="grid">
+    <div class="card"><h3>Crash Reduction</h3><p>Example: reduce crash rate by monitoring crash velocity instead of raw crash count.</p></div>
+    <div class="card"><h3>Incident Prevention</h3><p>Predict outage using early signals from client telemetry.</p></div>
+    <div class="card"><h3>Cost Optimization</h3><p>Reduce monitoring cost while increasing observability coverage.</p></div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Engineering Thinking</h2>
+  <p>Reliability is not monitoring more dashboards. It is designing systems that fail safely, degrade gracefully and recover automatically.</p>
+</section>
+
+<section class="container" id="learn">
+  <h2>Learn</h2>
+  <div class="grid">
+    <div class="card"><h3>Guides</h3><p>Foundational concepts and beginner tutorials</p></div>
+    <div class="card"><h3>Architecture</h3><p>Real production reliability architecture examples</p></div>
+    <div class="card"><h3>Tools</h3><p>Monitoring, tracing and alerting tools explained</p></div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Feedback</h2>
+  <p>Have suggestions or questions? Share your feedback to improve the learning platform.</p>
+  <a class="cta" href="/feedback.html">Leave Feedback</a>
+</section>
+
+<footer>
+  <p>© Mobile SRE Education</p>
+</footer>
+
+</body>
+</html>
