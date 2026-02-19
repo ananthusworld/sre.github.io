@@ -1,77 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mobile SRE Education</title>
-<style>
-  body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#0b1220;color:#e6edf6;line-height:1.6}
-  header{padding:80px 20px;text-align:center;background:linear-gradient(180deg,#0f1b35,#0b1220)}
-  h1{font-size:42px;margin:0 0 10px}
-  h2{margin-top:0}
-  .tag{color:#7dd3fc;font-weight:600}
-  .container{max-width:1100px;margin:auto;padding:60px 20px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-  .card{background:#121b33;border-radius:16px;padding:24px;box-shadow:0 10px 25px rgba(0,0,0,.3)}
-  .card h3{margin-top:0;color:#7dd3fc}
-  .cta{display:inline-block;margin-top:20px;padding:12px 22px;border-radius:10px;background:#2563eb;color:white;text-decoration:none}
-  footer{padding:40px 20px;text-align:center;color:#9aa4b2}
-</style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRE Knowledge Hub | Senior Site Reliability Engineer</title>
+    <meta
+      name="description"
+      content="Mastering Site Reliability Engineering through practical guides, case studies, tooling insights, and community updates."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/github-dark.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container">
+        <a class="logo" href="#home">SRE Knowledge Hub</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#learn">Learn</a></li>
+          <li><a href="#case-studies">Case Studies</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+              🌙
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-<header>
-  <h1>Mobile Site Reliability Engineering</h1>
-  <p class="tag">Learn how production mobile apps stay fast, stable and scalable</p>
-  <a class="cta" href="#learn">Start Learning</a>
-</header>
+    <main>
+      <section id="home" class="hero container">
+        <div class="hero-content">
+          <p class="eyebrow">Senior Site Reliability Engineer</p>
+          <h1>Mastering Site Reliability Engineering</h1>
+          <p class="intro">
+            Learn how to build resilient systems, define actionable SLOs, and lead operational
+            excellence with practical content from real production environments.
+          </p>
+          <div class="hero-actions">
+            <a href="#learn" class="btn btn-primary">Start Learning</a>
+            <a href="#case-studies" class="btn btn-secondary">View Case Studies</a>
+          </div>
+        </div>
+        <aside class="hero-highlights card">
+          <h2>Highlights</h2>
+          <ul>
+            <li><a href="#learn">Latest articles on SLOs & error budgets</a></li>
+            <li><a href="#case-studies">Production incident postmortems</a></li>
+            <li><a href="#tools">Monitoring and tooling tutorials</a></li>
+          </ul>
+        </aside>
+      </section>
 
-<section class="container" id="problem">
-  <h2>Why Mobile Reliability Matters</h2>
-  <p>Apps don’t fail in development — they fail in production. Real users experience crashes, latency spikes, API failures and rollout disasters. This site explains how reliability engineering prevents those failures before customers notice.</p>
-</section>
+      <section id="learn" class="section container">
+        <div class="section-heading">
+          <h2>Learn SRE / Blog</h2>
+          <p>Explore concepts like observability, incident response, and reliability engineering.</p>
+        </div>
+        <div class="search-row">
+          <input id="searchInput" type="search" placeholder="Search by topic (SLO, monitoring, incident...)" />
+          <span id="articleCount" class="pill"></span>
+        </div>
+        <div id="articlesGrid" class="grid"></div>
+      </section>
 
-<section class="container">
-  <h2>Expertise</h2>
-  <div class="grid">
-    <div class="card"><h3>Crash Prevention</h3><p>Detect crash patterns, velocity alerts and regression analysis before app store ratings drop.</p></div>
-    <div class="card"><h3>Performance</h3><p>Measure startup time, network latency and rendering performance using observability.</p></div>
-    <div class="card"><h3>Release Safety</h3><p>Canary deployments, staged rollouts and error budgets for mobile releases.</p></div>
-  </div>
-</section>
+      <section id="case-studies" class="section container">
+        <div class="section-heading">
+          <h2>Case Studies</h2>
+          <p>Real-world examples of reliability transformations and measurable outcomes.</p>
+        </div>
+        <div id="caseStudiesGrid" class="grid"></div>
+      </section>
 
-<section class="container">
-  <h2>Proof & Case Studies</h2>
-  <div class="grid">
-    <div class="card"><h3>Crash Reduction</h3><p>Example: reduce crash rate by monitoring crash velocity instead of raw crash count.</p></div>
-    <div class="card"><h3>Incident Prevention</h3><p>Predict outage using early signals from client telemetry.</p></div>
-    <div class="card"><h3>Cost Optimization</h3><p>Reduce monitoring cost while increasing observability coverage.</p></div>
-  </div>
-</section>
+      <section id="tools" class="section container">
+        <div class="section-heading">
+          <h2>Tools & Monitoring</h2>
+          <p>Recommended stack, implementation notes, and guidance for practical SRE operations.</p>
+        </div>
+        <div id="toolsGrid" class="grid"></div>
+        <article class="card slo-guide">
+          <h3>SLO & Alerting Quick Guide</h3>
+          <ol>
+            <li>Define user journeys (e.g., API availability, checkout latency).</li>
+            <li>Pick SLIs tied to user impact (success rate, p95 latency).</li>
+            <li>Set SLO targets and error budget policies per service tier.</li>
+            <li>Alert on burn-rate, not every failure event.</li>
+          </ol>
+<pre><code class="language-javascript">// Example multi-window burn-rate alert logic
+const burnRate = errorRate / (1 - sloTarget);
+if (burnRate > 14.4 && window === '5m') pageOnCall();
+if (burnRate > 6 && window === '1h') createIncident();</code></pre>
+        </article>
+      </section>
 
-<section class="container">
-  <h2>Engineering Thinking</h2>
-  <p>Reliability is not monitoring more dashboards. It is designing systems that fail safely, degrade gracefully and recover automatically.</p>
-</section>
+      <section id="news" class="section container">
+        <div class="section-heading">
+          <h2>News / Updates</h2>
+          <p>Latest SRE trends and updates from trusted engineering sources.</p>
+        </div>
+        <div class="news-actions">
+          <button id="refreshNews" class="btn btn-secondary">Refresh News Feed</button>
+          <span id="newsStatus" class="status"></span>
+        </div>
+        <div id="newsGrid" class="grid"></div>
+      </section>
 
-<section class="container" id="learn">
-  <h2>Learn</h2>
-  <div class="grid">
-    <div class="card"><h3>Guides</h3><p>Foundational concepts and beginner tutorials</p></div>
-    <div class="card"><h3>Architecture</h3><p>Real production reliability architecture examples</p></div>
-    <div class="card"><h3>Tools</h3><p>Monitoring, tracing and alerting tools explained</p></div>
-  </div>
-</section>
+      <section id="contact" class="section container">
+        <div class="section-heading">
+          <h2>Feedback / Contact</h2>
+          <p>Ask questions, suggest topics, or share feedback.</p>
+        </div>
+        <form id="contactForm" class="card contact-form">
+          <label>
+            Name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-note">Stored locally as JSON in your browser (demo mode).</p>
+          <p id="formResponse" class="status"></p>
+        </form>
+      </section>
+    </main>
 
-<section class="container">
-  <h2>Feedback</h2>
-  <p>Have suggestions or questions? Share your feedback to improve the learning platform.</p>
-  <a class="cta" href="/feedback.html">Leave Feedback</a>
-</section>
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> SRE Knowledge Hub</p>
+        <div class="socials">
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="mailto:sre@example.com">Email</a>
+        </div>
+      </div>
+    </footer>
 
-<footer>
-  <p>© Mobile SRE Education</p>
-</footer>
-
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/highlight.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
